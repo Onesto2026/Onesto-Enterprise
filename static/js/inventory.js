@@ -30,7 +30,7 @@ const INVENTORY = {
                 "desc": "Buttery, crisp cookies infused with rich chocolate chips and the toasted flavor of hazelnuts."
             },
             {
-                "name": "Hide & Seek Milano Finest Choco Filled Cookies",
+                "name": "Hide & Seek Milano Finest Choco Filled",
                 "image": "media/products/finest-choco-fill.jpeg",
                 "desc": "Delicate, crispy cookies with a luxurious center of smooth, molten chocolate."
             },
@@ -168,7 +168,7 @@ const INVENTORY = {
         "products": [
             {
                 "name": "Dark Fantasy - Choco Chunks",
-                "image": "media/products/Choco-chunks.jpeg",
+                "image": "media/products/Choco-Chunks.jpeg",
                 "desc": "Rich cocoa cookies loaded with melty, oversized chocolate chunks."
             },
             {
@@ -284,7 +284,7 @@ const INVENTORY = {
     },
     "skore": {
         "name": "Skore",
-        "logo": "media/brands/skore.png",
+        "logo": "media/brands/Skore.png",
         "desc": "Experience fun, flavor, and excitement with Skore condoms.",
         "products": [
             {
