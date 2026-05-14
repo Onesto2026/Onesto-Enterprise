@@ -38,7 +38,7 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-glass sticky-top py-3 transition-all">
     <div class="container align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="../index.html">
-            <img src="../static/images/logo2.png" alt="Onesto Enterprises Logo" height="35" class="d-inline-block align-text-top logo-scale">
+            <img src="../static/images/logo2.png" alt="Onesto Enterprises Logo" height="35" class="d-inline-block align-text-top logo-scale" fetchpriority="high" decoding="async">
         </a>
         <button class="navbar-toggler border-0 shadow-none px-2 mobile-btn-open" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
             <i class="bi bi-list text-dark"></i>
@@ -78,7 +78,7 @@
             <div class="row align-items-center">
                 <div class="col-md-2 text-center text-md-start mb-4 mb-md-0">
                     <div class="d-inline-block">
-                        <img id="brand-logo" src="" alt="Brand" class="img-fluid brand-detail-logo" style="display:none;">
+                        <img id="brand-logo" src="" alt="Brand" class="img-fluid brand-detail-logo" style="display:none;" fetchpriority="high" decoding="async">
                     </div>
                 </div>
                 <div class="col-md-10 text-center text-md-start">
@@ -112,7 +112,7 @@
         <div class="row g-5 pb-5">
             <!-- Branding Div -->
             <div class="col-lg-5 pe-lg-5">
-                <img src="../static/images/logo-onesto-transparent.png" alt="Onesto Enterprises Logo" height="45" class="mb-4" style="filter: brightness(0) invert(1) opacity(0.95);">
+                <img src="../static/images/logo-onesto-transparent.png" alt="Onesto Enterprises Logo" height="45" class="mb-4" style="filter: brightness(0) invert(1) opacity(0.95);" loading="lazy" decoding="async">
                 <p class="text-white-50 fw-light lh-lg pe-xl-4 mb-4" style="font-size: 0.95rem;">
                     Providing reliable export services, connecting quality Indian products with global markets through consistent sourcing and dependable delivery.
                 </p>
@@ -225,7 +225,7 @@
             <div class="col-6 col-sm-4 col-md-3 col-lg-20 mb-3 mb-md-4">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden product-card transition-all position-relative" style="background: #fdf8f6; border-radius: 24px;">
                     <div class="position-absolute top-0 start-0 w-100 d-flex align-items-center justify-content-center" style="height: 62%; z-index: 0; padding: 0;">
-                        <img src="${imgSrc}" class="product-img-cover w-100 h-100" style="object-fit: cover; mix-blend-mode: multiply;" alt="${product.name}">
+                        <img src="${imgSrc}" class="product-img-cover w-100 h-100" style="object-fit: cover; mix-blend-mode: multiply;" alt="${product.name}" loading="lazy" decoding="async">
                     </div>
 
                     <!-- White Content Card Overlapping -->
