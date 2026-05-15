@@ -748,6 +748,7 @@ img.brand-detail-logo[alt="Unibic"] {
 
 .product-info-white {
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 48%;
 }
 
 /* Hover effects wrapped to prevent strictly on mouse interfaces -------- */
@@ -826,12 +827,18 @@ img.brand-detail-logo[alt="Unibic"] {
         aspect-ratio: 8 / 9;
     }
 
+    .product-info-white {
+        height: 54%;
+    }
+
     .product-title {
         font-size: 0.95rem;
     }
 
     .product-desc {
         font-size: 0.8rem;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
 }
 
@@ -842,17 +849,15 @@ img.brand-detail-logo[alt="Unibic"] {
 
     .product-desc {
         font-size: 0.75rem;
-        -webkit-line-clamp: 1;
-        line-clamp: 1;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
 }
 
 /* Mobile M Targeting specifically for breathing room -------------------- */
 
 @media (min-width: 375px) and (max-width: 424.98px) {
-    .product-title {
-        margin-top: 0.5rem !important;
-    }
+    /* Removed margin-top to ensure symmetrical spacing around title */
 }
 
 /* ========================================= */

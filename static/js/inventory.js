@@ -7,42 +7,42 @@ const INVENTORY = {
             {
                 "name": "Hide & Seek Classic Chocolate Chip",
                 "image": "media/products/classic-choco.jpeg",
-                "desc": "Crisp chocolate cookies packed with iconic, melt-in-your-mouth chocolate chips."
+                "desc": "Crisp chocolate cookies packed with iconic chocolate chips."
             },
             {
                 "name": "Hide & Seek Caffé Mocha Cookies",
                 "image": "media/products/caffe-mocha.jpeg",
-                "desc": "Crisp chocolate chip cookies infused with a rich, aromatic coffee flavor."
+                "desc": "Crisp chocolate chip cookies infused with a rich coffee flavor."
             },
             {
                 "name": "Hide & Seek Choco Almond Cookies",
                 "image": "media/products/choco-almond.jpeg",
-                "desc": "Crispy chocolate cookies loaded with rich chocolate chips and crunchy almond bits."
+                "desc": "Crispy chocolate cookies loaded with chocolate chips and almond bits."
             },
             {
                 "name": "Hide & Seek Milano Chocolate Chip",
                 "image": "media/products/milano-choco.jpeg",
-                "desc": "Light, buttery cookies generously topped with premium chocolate chips for a melt-in-your-mouth experience."
+                "desc": "Light, buttery cookies topped with premium chocolate chips."
             },
             {
                 "name": "Hide & Seek Milano Hazelnut Chip",
                 "image": "media/products/milano-hazlenut.jpeg",
-                "desc": "Buttery, crisp cookies infused with rich chocolate chips and the toasted flavor of hazelnuts."
+                "desc": "Buttery cookies infused with chocolate chips and toasted hazelnuts."
             },
             {
                 "name": "Hide & Seek Milano Finest Choco Filled",
                 "image": "media/products/finest-choco-fill.jpeg",
-                "desc": "Delicate, crispy cookies with a luxurious center of smooth, molten chocolate."
+                "desc": "Delicate, crispy cookies with a smooth, molten chocolate center."
             },
             {
                 "name": "Hide & Seek Milano Mixed Berries",
                 "image": "media/products/mixed-burries.jpeg",
-                "desc": "Crispy, buttery cookies filled with a vibrant and tangy mixed berry cream."
+                "desc": "Crispy, buttery cookies filled with a vibrant mixed berry cream."
             },
             {
                 "name": "Hide & Seek Milano Vanilla Filled",
                 "image": "media/products/milano-vanila-fills.jpeg",
-                "desc": "Crispy, golden cookies with a smooth and velvety vanilla cream center."
+                "desc": "Crispy, golden cookies with a smooth vanilla cream center."
             }
         ]
     },
