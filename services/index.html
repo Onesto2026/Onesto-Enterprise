@@ -35,6 +35,19 @@
 
     <!-- Load Inventory Data -->
     <script src="../static/js/inventory.js"></script>
+
+    <!-- Aggressive Preloading for Instant Image Display -->
+    <script>
+        (function() {
+            if (typeof INVENTORY !== 'undefined') {
+                for (var key in INVENTORY) {
+                    if (INVENTORY[key].logo) {
+                        var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp'; l.href = '../' + INVENTORY[key].logo; l.fetchPriority = 'high'; document.head.appendChild(l);
+                    }
+                }
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -345,7 +358,7 @@
                     <a href="../services/brand.html?id=${id}" class="text-decoration-none h-100 d-block">
                         <div class="showcase-card">
                             <div class="showcase-image-stage">
-                                <img src="${logoSrc}" alt="${brand.name}" class="showcase-logo-img" loading="lazy" decoding="async">
+                                <img src="${logoSrc}" alt="${brand.name}" class="showcase-logo-img" type="image/webp" loading="eager" fetchpriority="high" decoding="async">
                             </div>
 
                             <div class="showcase-body d-flex flex-column text-center">

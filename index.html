@@ -33,6 +33,23 @@
 
     <!-- Load Inventory Data -->
     <script src="static/js/inventory.js"></script>
+    
+    <!-- Aggressive Preloading for Instant Image Display -->
+    <link rel="preload" as="image" href="static/images/hero-bg.png" fetchpriority="high">
+    <script>
+        (function() {
+            if (typeof INVENTORY !== 'undefined') {
+                var count = 0;
+                for (var key in INVENTORY) {
+                    if (count >= 3) break;
+                    if (INVENTORY[key].logo) {
+                        var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp'; l.href = INVENTORY[key].logo; l.fetchPriority = 'high'; document.head.appendChild(l);
+                    }
+                    count++;
+                }
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -93,7 +110,8 @@
     <div class="offcanvas offcanvas-end border-0 shadow-lg" tabindex="-1" id="mobileMenu"
         aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header bg-white border-bottom p-4">
-            <img src="static/images/logo2.png" alt="Onesto Enterprises Logo" height="65" id="mobileMenuLabel" fetchpriority="high" decoding="async">
+            <img src="static/images/logo2.png" alt="Onesto Enterprises Logo" height="65" id="mobileMenuLabel"
+                fetchpriority="high" decoding="async">
             <button type="button" class="btn-close text-reset shadow-none mobile-btn-close" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
         </div>
@@ -460,7 +478,8 @@
                 <!-- Branding Div -->
                 <div class="col-lg-5 pe-lg-5">
                     <img src="static/images/logo-onesto-transparent.png" alt="Onesto Enterprises Logo" height="45"
-                        class="mb-4" style="filter: brightness(0) invert(1) opacity(0.95);" loading="lazy" decoding="async">
+                        class="mb-4" style="filter: brightness(0) invert(1) opacity(0.95);" loading="lazy"
+                        decoding="async">
                     <p class="text-white-50 fw-light lh-lg pe-xl-4 mb-4" style="font-size: 0.95rem;">
                         Providing reliable export services, connecting quality Indian products with global markets
                         through consistent sourcing and dependable delivery.
@@ -614,7 +633,7 @@
                     <a href="services/brand.html?id=${id}" class="text-decoration-none h-100 d-block">
                         <div class="showcase-card">
                             <div class="showcase-image-stage">
-                                <img src="${logoSrc}" alt="${brand.name}" class="showcase-logo-img" loading="lazy" decoding="async">
+                                <img src="${logoSrc}" alt="${brand.name}" class="showcase-logo-img" type="image/webp" loading="eager" fetchpriority="high" decoding="async">
                             </div>
 
                             <div class="showcase-body d-flex flex-column text-center">

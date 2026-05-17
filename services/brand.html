@@ -24,6 +24,25 @@
     
     <!-- Load Inventory Data -->
     <script src="../static/js/inventory.js"></script>
+    
+    <!-- Aggressive Preloading for Instant Image Display -->
+    <script>
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var brandId = params.get('id');
+            if (brandId && typeof INVENTORY !== 'undefined' && INVENTORY[brandId]) {
+                var brand = INVENTORY[brandId];
+                if (brand.logo) {
+                    var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp'; l.href = '../' + brand.logo; l.fetchPriority = 'high'; document.head.appendChild(l);
+                }
+                if (brand.products) {
+                    brand.products.forEach(function(p) {
+                        var l = document.createElement('link'); l.rel = 'preload'; l.as = 'image'; l.type = 'image/webp'; l.href = '../' + p.image; document.head.appendChild(l);
+                    });
+                }
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -225,7 +244,7 @@
             <div class="col-6 col-sm-4 col-md-3 col-lg-20 mb-3 mb-md-4">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden product-card transition-all position-relative" style="background: #fdf8f6; border-radius: 24px;">
                     <div class="position-absolute top-0 start-0 w-100 d-flex align-items-center justify-content-center" style="height: 62%; z-index: 0; padding: 0;">
-                        <img src="${imgSrc}" class="product-img-cover w-100 h-100" style="object-fit: cover; mix-blend-mode: multiply;" alt="${product.name}" loading="lazy" decoding="async">
+                        <img src="${imgSrc}" class="product-img-cover w-100 h-100" style="object-fit: cover; mix-blend-mode: multiply;" alt="${product.name}" type="image/webp" loading="eager" fetchpriority="high" decoding="async">
                     </div>
 
                     <!-- White Content Card Overlapping -->

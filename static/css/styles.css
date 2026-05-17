@@ -736,7 +736,7 @@ img.brand-detail-logo[alt="Unibic"] {
     background-color: #fdf8f6;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
     position: relative;
 }
 
@@ -748,7 +748,7 @@ img.brand-detail-logo[alt="Unibic"] {
 
 .product-info-white {
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    height: 48%;
+    height: 50%;
 }
 
 /* Hover effects wrapped to prevent strictly on mouse interfaces -------- */
@@ -806,9 +806,35 @@ img.brand-detail-logo[alt="Unibic"] {
     }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .product-card {
+        aspect-ratio: 2 / 3;
+    }
+    .product-info-white {
+        height: 48%;
+    }
+    .product-desc {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+}
+
 @media (max-width: 991.98px) {
     .product-title {
         font-size: 1.0rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .product-card {
+        aspect-ratio: 3 / 5;
+    }
+    .product-info-white {
+        height: 47%;
+    }
+    .product-desc {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
     }
 }
 
@@ -824,11 +850,11 @@ img.brand-detail-logo[alt="Unibic"] {
 
 @media (max-width: 575.98px) {
     .product-card {
-        aspect-ratio: 8 / 9;
+        aspect-ratio: 4 / 5;
     }
 
     .product-info-white {
-        height: 54%;
+        height: 56%;
     }
 
     .product-title {
@@ -837,20 +863,28 @@ img.brand-detail-logo[alt="Unibic"] {
 
     .product-desc {
         font-size: 0.8rem;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
     }
 }
 
 @media (max-width: 374.98px) {
+    .product-card {
+        aspect-ratio: 2 / 3;
+    }
+
+    .product-info-white {
+        height: 52%;
+    }
+
     .product-title {
         font-size: 0.85rem;
     }
 
     .product-desc {
         font-size: 0.75rem;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
     }
 }
 
